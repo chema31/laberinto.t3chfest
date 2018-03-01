@@ -13,15 +13,24 @@
         <h1>Laberinto 3D</h1>
         <span>(ventealiquid@accenture.com)</span>
         <h2>Últimos tiempos</h2>
-        <?php if ($tiempos): ?>
-            <ul>
-            <?php foreach ($tiempos as $tiempo): ?>
-                <li><?php echo $tiempo['recorrido'] ?></li>
+        <?php
+        if ($dispositivos):
+            foreach ($dispositivos as $dispositivo => $tiempos): ?>
+                <h3><?php echo $dispositivo ?></h3>
+                <?php if ($tiempos): ?>
+                    <ul>
+                    <?php foreach ($tiempos as $tiempo): ?>
+                        <li><?php echo $tiempo['recorrido'] ?></li>
+                    <?php endforeach; ?>
+                    </ul>
+                <?php else: ?>
+                    <p>:_( Nadie ha jugado aún con nuestro laberinto.</p>
+                    <p>¿A qué estás esperando para probar?</p>
+                <?php endif; ?>
             <?php endforeach; ?>
-            </ul>
         <?php else: ?>
             <p>:_( Nadie ha jugado aún con nuestro laberinto.</p>
-            <p>¿A qué estás esperando para probar?</p>
+            <p>¡Coge uno ya!</p>
         <?php endif; ?>
     </body>
 </html>
