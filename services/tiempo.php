@@ -54,11 +54,11 @@ function setTime($connextion, $laberinto, $time)
         $resultado = $connextion->query($sql);
 
     } catch (Exception $e) {
-        echo "[ERROR DataBase] INSERT";
+        echo '-10';
         die($e->message);
     }
     if (false === $resultado) {
-        echo "[ERROR INSERT] Algo raro ha pasado";
+        echo '-11';
     }
 
     $connextion->close();
