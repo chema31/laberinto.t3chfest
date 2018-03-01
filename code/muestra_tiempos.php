@@ -10,7 +10,7 @@ include_once('config/database.php');
 include_once('services/tiempo.php');
 
 //Obtengo los tiempos de base de datos
-$tiempos = getTimes($mysqli);
+$tiempos = getTimes($mysqli, 'recorrido DESC');
 
 //Vista
 include_once('view/tiempos.php');
