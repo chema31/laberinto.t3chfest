@@ -3,8 +3,8 @@
  * Configuración de base de datos
  */
 $database = [
-    'user' => 'laberinto',
-    'password' => 't3chfest.laberinto',
+    'user' => 'root',
+    'password' => 'root',
     'host' => 'localhost',
     'database' => 'laberinto'
 ];
